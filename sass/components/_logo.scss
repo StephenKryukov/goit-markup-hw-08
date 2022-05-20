@@ -1,0 +1,21 @@
+/* Лого */
+.logo {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.48;
+	color: $accent-color;
+	text-decoration: none;
+
+	&__studio {
+	color: $primary-text-color;
+}
+	&__studio--white {
+	color: $primary-white-color;
+}
+	&__footer {
+	@extend .logo;
+	margin-bottom: 20px;
+}
+}
