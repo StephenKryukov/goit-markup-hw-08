@@ -4,12 +4,16 @@
 	background-color: $background-grey-color;
 
 	&__container {
-			@extend %container;
-		}
+		@extend %container;
+	}
 
 	&__title {
-			@extend %container__title;
+		@extend %container__title;
+
+		@media screen and (max-width: 1199px) {
+		margin-bottom: 30px;	
 		}
+	}
 
 	&__list {
 		display: flex;

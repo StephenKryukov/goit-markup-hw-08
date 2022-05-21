@@ -8,6 +8,9 @@
 
 	&__title {
 		@extend %container__title;
+		@media screen and (max-width: 1199px) {
+			margin-bottom: 30px;	
+		}
 	}
 	
 	&__list {
@@ -16,13 +19,12 @@
 		justify-content: center;
 		padding-left: 0;
 		padding-right: 0;
-		margin-top: 0;
-		margin-bottom: 0;
+		margin: -15px;
 	}
 
 	&__item {
-		margin-right: 30px;
-	}
+		margin: 15px;
+		}
 
 	&__button {
 		display: flex;
