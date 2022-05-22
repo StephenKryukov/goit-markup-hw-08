@@ -20,14 +20,14 @@ a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1599px) {
+@media screen and (max-width: 1199px) {
   .hero, .advantages, .about, .team, .clients, .portfolio {
     padding-top: 60px;
     padding-bottom: 60px;
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .hero, .advantages, .about, .team, .clients, .portfolio {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -609,7 +609,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 170px;
+  width: 210px;
   height: 92px;
   color: #AFB1B8;
   background-color: #ffffff;
@@ -617,6 +617,18 @@ a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .clients__button {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__button {
+    width: 170px;
+  }
 }
 
 .clients__button:hover, .clients__button:focus {
