@@ -10,18 +10,47 @@
 		}
 
 	&__list {
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-left: 0;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-left: 0;
+		@media screen and (min-width: $tablet) {
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-around;
+		}
 	}
 
 	&__object {
 		width: 231px;
-		margin-right: 70px;
+		text-align: center;
+		margin-bottom: 60px;
+		@media screen and (max-width: 1199px) {
+			width: 232px;	
+		}
+		@media screen and (min-width: $desktop) {
+			text-align: left;
+			margin-right: 70px;
+		}
 	}
 
+	&__object:nth-child(2) {
+		width: 206px;
+		@media screen and (max-width: 767px) {
+			
+		}
+		@media screen and (min-width: $tablet) {
+			margin-bottom: 0;
+		}
+		@media screen and (min-width: $desktop) {
+			text-align: left;
+			margin-right: 0;
+		}
+	}
+	
 	&__unit {
 		padding-left: 0;
 		margin-top: 0;
@@ -30,6 +59,9 @@
 
 	&__item:not(:last-child) {
 		margin-bottom: 9px;
+		@media screen and (min-width: $tablet) {
+			margin-bottom: 8px;	
+		}
 	}
 
 	&__address {
@@ -61,8 +93,14 @@
 		text-transform: uppercase;
 		color: $primary-white-color;
 		margin: 0;
-		margin-top: 12px;
+		margin-top: 0;
 		margin-bottom: 20px;
+		@media screen and (min-width: $desktop) {
+			margin-top: 5px;
+		}
+		@media screen and (min-width: $desktop) {
+			margin-top: 12px;
+		}
 	}
 
 	&__social {
@@ -71,18 +109,27 @@
 }
 
 .subscribe {
-	margin-left: 93px;
+	text-align: center;
+	width: 450px;
+	@media screen and (min-width: $desktop) {
+			margin-left: 93px;
+			text-align: left;
+			width: 570px;
+	}
 
 	&__join {
 		@extend .footer__join;
 	}
 	
 	&__form {
-		display: block;
-		/*display: flex; */
+		display: flex;
+		flex-direction: column;
 		align-items: center;
 		margin: 0;
 		padding: 0;
+			@media screen and (min-width: $desktop) {
+			flex-direction: row;
+		}
 	}
 
 	&__window {
@@ -108,11 +155,8 @@
 		height: 50px;
 		display: flex;
 		align-items: center;
-		padding-top: 0;
-		padding-bottom: 0;
+		padding: 0;
 		padding-left: 29px;
-		padding-right: 0;
-		margin-left: 12px;
 		font-weight: 700;
 		font-size: 16px;
 		line-height: 1.88;
@@ -123,6 +167,12 @@
 		border-radius: 4px;
 		background-color: $accent-color;
 		cursor: pointer;
+		@media screen and (min-width: $desktop) {
+			margin-left: 12px;
+		}
+		@media screen and (max-width: 1199px) {
+			margin-top: 20px;
+		}
 	}
 
 	&__icon {
