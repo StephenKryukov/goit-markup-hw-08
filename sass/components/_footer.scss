@@ -59,9 +59,9 @@
 	}
 
 	&__item:not(:last-child) {
-		margin-bottom: 9px;
-		@media screen and (min-width: $tablet) {
-			margin-bottom: 8px;	
+		margin-bottom: 8px;
+		@media screen and (min-width: $desktop) {
+			margin-bottom: 9px;	
 		}
 	}
 

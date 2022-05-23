@@ -1,4 +1,5 @@
 /* Герой */
+
 .hero {
 	@extend %section;
 	text-align: center;
@@ -12,11 +13,52 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+
 	background-image: linear-gradient(to right,
 			rgba(47, 48, 58, 0.4),
 			rgba(47, 48, 58, 0.4)),
-		url(../images/overlay/hero-overlay.jpg);
+			url(../images/index-images/hero-mob-x1.jpg);
 
+		@media screen and (min-device-pixel-ratio: 2),
+			screen and (min-resolution: 192dpi),
+			screen and (min-resolution: 2dppx) {
+			background-image:	linear-gradient(to right,
+					rgba(47, 48, 58, 0.4),
+					rgba(47, 48, 58, 0.4)),
+					url(../images/index-images/hero-mob-x2.jpg);
+		}
+
+		@media screen and (min-width: $tablet) {
+			background-image:	linear-gradient(to right,
+					rgba(47, 48, 58, 0.4),
+					rgba(47, 48, 58, 0.4)),
+					url(../images/index-images/hero-tab-x1.jpg);
+			}
+
+		@media screen and (min-device-pixel-ratio: 2),
+		screen and (min-resolution: 192dpi),
+		screen and (min-resolution: 2dppx) {
+		background-image:	linear-gradient(to right,
+					rgba(47, 48, 58, 0.4),
+					rgba(47, 48, 58, 0.4)),
+					url(../images/index-images/hero-tab-x2.jpg);
+		}
+		
+		@media screen and (min-width: $desktop) {
+			background-image:	linear-gradient(to right,
+					rgba(47, 48, 58, 0.4),
+					rgba(47, 48, 58, 0.4)),
+					url(../images/index-images/hero-des-x1.jpg);
+		}
+
+		@media screen and (min-device-pixel-ratio: 2),
+		screen and (min-resolution: 192dpi),
+		screen and (min-resolution: 2dppx) {
+		background-image:	linear-gradient(to right,
+					rgba(47, 48, 58, 0.4),
+					rgba(47, 48, 58, 0.4)),
+					url(../images/index-images/hero-des-x2.jpg);
+		}
 
 	&__title {
 		max-width: 700px;
@@ -25,11 +67,18 @@
 		line-height: 1.36;
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
+		text-align: center;
 		color: $primary-white-color;
 		margin-top: 0;
 		margin-bottom: 30px;
 		margin-left: auto;
 		margin-right: auto;
+
+		@media screen and (max-width: 1199px) {	
+		max-width: 360px;
+		font-size: 26px;
+		line-height: 1.62;
+		}
 	}
 
 	&__button {

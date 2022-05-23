@@ -5,10 +5,13 @@
 	&::after {
 	display: block;
 	position: absolute;
-	top: 79px;
+	top: 59px;
 	content: "";
 	width: 100%;
 	border-bottom: 1px solid #ECECEC;
+	@media screen and (min-width:$tablet) {
+		top: 79px;
+		}
 	}
 		
 	&__container {
@@ -17,7 +20,7 @@
 		align-items: center;
 		position: relative;
 		@media screen and (max-width:1199px) {
-			justify-content: space-between;;
+			justify-content: space-between;
 		}
 	}
 
@@ -107,6 +110,7 @@
 		background-color: $accent-color;
 		z-index: 1;
 	}
+
 	&__button {
 		display: flex;
 		border: none;

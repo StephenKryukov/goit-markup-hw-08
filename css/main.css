@@ -179,10 +179,16 @@ a {
 .header::after {
   display: block;
   position: absolute;
-  top: 79px;
+  top: 59px;
   content: "";
   width: 100%;
   border-bottom: 1px solid #ECECEC;
+}
+
+@media screen and (min-width: 768px) {
+  .header::after {
+    top: 79px;
+  }
 }
 
 .header__container {
@@ -501,8 +507,43 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/overlay/hero-overlay.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/overlay/hero-overlay.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/index-images/hero-mob-x1.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/index-images/hero-mob-x1.jpg);
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/index-images/hero-mob-x2.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/index-images/hero-mob-x2.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/index-images/hero-tab-x1.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/index-images/hero-tab-x1.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/index-images/hero-tab-x2.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/index-images/hero-tab-x2.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/index-images/hero-des-x1.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/index-images/hero-des-x1.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/index-images/hero-des-x2.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/index-images/hero-des-x2.jpg);
+  }
 }
 
 .hero__title {
@@ -512,11 +553,20 @@ a {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: center;
   color: #ffffff;
   margin-top: 0;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (max-width: 1199px) {
+  .hero__title {
+    max-width: 360px;
+    font-size: 26px;
+    line-height: 1.62;
+  }
 }
 
 .hero__button {
@@ -960,14 +1010,24 @@ a {
   border-radius: 4px;
 }
 
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
 .is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(0.5);
           transform: translate(-50%, -50%) scale(0.5);
 }
 
 .modal__title {
+  width: calc(100% - 2 * 40px);
   margin-top: 40px;
   margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -978,7 +1038,7 @@ a {
 
 .modal__form {
   margin-top: 12px;
-  width: 448px;
+  width: calc(100% - 2 * 40px);
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 40px;
@@ -1114,7 +1174,7 @@ a {
 .modal__button--close {
   position: absolute;
   top: 8px;
-  left: 490px;
+  right: 8px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1165,6 +1225,13 @@ a {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1199px) {
+  .checkbox__label {
+    margin-left: 24px;
+    font-size: 12px;
+  }
+}
+
 .checkbox__link {
   text-decoration: underline;
   color: #2196F3;
@@ -1198,7 +1265,7 @@ a {
   visibility: visible;
 }
 
-.checkbox__icon {
+.checkbox__icon, .checkbox__icon--checked {
   position: absolute;
   left: 12px;
   top: 50%;
@@ -1206,12 +1273,13 @@ a {
           transform: translate(0, -50%);
 }
 
+@media screen and (max-width: 1199px) {
+  .checkbox__icon, .checkbox__icon--checked {
+    left: 0;
+  }
+}
+
 .checkbox__icon--checked {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
   visibility: hidden;
 }
 
@@ -1521,12 +1589,12 @@ a {
 }
 
 .footer__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .footer__item:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 9px;
   }
 }
 
