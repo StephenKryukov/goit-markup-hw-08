@@ -488,10 +488,6 @@ a {
   display: none;
 }
 
-.header-modal.is-open .logo, .header-modal.is-open .logo__footer {
-  display: none;
-}
-
 /* Герой */
 .hero {
   text-align: center;
@@ -851,8 +847,10 @@ a {
   margin-bottom: 16px;
 }
 
-.team_social {
-  margin-bottom: 24px;
+@media screen and (max-width: 1199px) {
+  .team__social {
+    margin-bottom: 24px;
+  }
 }
 
 /* Постоянные клиенты */
@@ -1495,6 +1493,7 @@ a {
   .footer__object {
     text-align: left;
     margin-right: 70px;
+    margin-bottom: 0;
   }
 }
 

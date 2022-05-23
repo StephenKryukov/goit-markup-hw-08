@@ -84,7 +84,9 @@
 		margin-bottom: 16px;
 	}
 
-	&_social {
+	&__social {
+		@media screen and (max-width:1199px) {
 		margin-bottom: 24px;
+		}
 	}
 }
