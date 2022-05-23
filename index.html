@@ -47,7 +47,8 @@
 			</ul>
 			<button class="header__button" type="button" data-menu-button>
 				<svg class="header__icon--menu" width="40" height="40">
-					<use href="./images/icons/icons.svg#menu"></use>
+					<use class="open" href="./images/icons/icons.svg#menu"></use>
+					<use class="close" href="./images/icons/icons.svg#menu-close"></use>
 				</svg>
 			</button>
 			<!--<div class="header__backdrop">-->
@@ -60,7 +61,7 @@
 							<a href="./portfolio.html" class="header-modal__name">Портфолио</a>
 						</li>
 						<li class="header-modal__item">
-							<a href="/" class="header-modal__name">Контакты</a>
+							<a href="/" class="header-modal__name" data-menu-button>Контакты</a>
 						</li>
 					</ul>
 					<ul class="header-modal__contacts">
@@ -85,8 +86,9 @@
 							<a class="header-modal__social-text" href="/">LinkedIn</a>
 						</li>
 					</ul>
-					<button type="button" data-menu-button>
+					<button class="header__button" type="button" data-menu-button>
 						<svg class="header-modal__icon--menu" width="40" height="40">
+						
 							<use href="./images/icons/icons.svg#menu-close"></use>
 						</svg>
 					</button>
