@@ -40,9 +40,6 @@
 
 	&__object:nth-child(2) {
 		width: 206px;
-		@media screen and (max-width: 767px) {
-			
-		}
 		@media screen and (min-width: $tablet) {
 			margin-bottom: 0;
 		}
@@ -51,7 +48,13 @@
 			margin-right: 0;
 		}
 	}
-	
+
+	&__object--last {
+		@media screen and (max-width: 767px) {
+		width: 100%;
+		}
+	}
+
 	&__unit {
 		padding-left: 0;
 		margin-top: 0;
@@ -111,7 +114,7 @@
 
 .subscribe {
 	text-align: center;
-	width: 450px;
+	width: 100%;
 	@media screen and (min-width: $desktop) {
 			margin-left: 93px;
 			text-align: left;
@@ -135,7 +138,7 @@
 	}
 
 	&__window {
-		width: 358px;
+		width: 100%;
 		height: 50px;
 		font-size: 16px;
 		line-height: 1.25;
@@ -149,6 +152,13 @@
 		border: 1px solid rgba(255, 255, 255, 0.3);
 		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 		border-radius: 4px;
+		@media screen and (min-width: $tablet) {
+			width: 450px;
+		}
+		@media screen and (min-width:$desktop) {
+			width: 358px;
+		}
+
 	}
 
 	&__button {
