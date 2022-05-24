@@ -393,6 +393,8 @@ a {
   margin-left: auto;
   margin-right: auto;
   z-index: 2;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 }
 
 @media screen and (min-width: 480px) {
@@ -1312,9 +1314,21 @@ a {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .checkbox__label {
+    display: inline-block;
+  }
+}
+
 .checkbox__link {
   text-decoration: underline;
   color: #2196F3;
+}
+
+@media screen and (max-width: 479px) {
+  .checkbox__link {
+    display: inline;
+  }
 }
 
 .checkbox__input {
@@ -1535,7 +1549,15 @@ a {
 }
 
 .gallery__overlay--blue {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1548,13 +1570,23 @@ a {
           transform: translateY(100%);
 }
 
+@media screen and (max-width: 479px) {
+  .gallery__overlay--blue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .gallery__text {
   display: block;
   width: calc(100% - 48px);
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 77px;
-  margin-bottom: 77px;
   font-size: 18px;
   line-height: 1.56;
   color: #ffffff;
@@ -1562,21 +1594,7 @@ a {
 
 @media screen and (max-width: 479px) {
   .gallery__text {
-    margin-top: 10px;
-    margin-bottom: 0;
     font-size: 14px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .gallery__text {
-    margin-top: 49px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .gallery__text {
-    margin-top: 63px;
   }
 }
 

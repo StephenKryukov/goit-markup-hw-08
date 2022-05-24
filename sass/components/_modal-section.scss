@@ -213,12 +213,17 @@
 			margin-left: 24px;
 			font-size: 12px;
 		}
-		
+			@media screen and (max-width:479px) {
+			display: inline-block;
+		}
 	}
 
 	&__link {
 		text-decoration: underline;
 		color: $accent-color;
+		@media screen and (max-width:479px) {
+			display: inline;
+		}
 	}
 
 	&__input {
