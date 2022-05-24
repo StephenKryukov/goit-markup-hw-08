@@ -62,11 +62,16 @@
 
 	&__item {
 		margin-right: 8px;
+		@media screen and (max-width:479px) {
+			margin: 8px;
+		}
 	}
-
 	&__item:nth-last-child(-n + 2) {
 	@media screen and (max-width:767px) {
 		margin-top: 15px;
+		}
+				@media screen and (max-width:479px) {
+		margin-top: 8px;
 		}
 	}
 
@@ -161,6 +166,11 @@
 		font-size: 18px;
 		line-height: 1.56;
 		color: $primary-white-color;
+		@media screen and (max-width:479px) {
+			margin-top: 10px;
+			margin-bottom: 0;
+			font-size: 14px;
+		}
 		@media screen and (min-width:$tablet) {
 			margin-top: 49px;
 		}
