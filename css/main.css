@@ -365,6 +365,18 @@ a {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.header__icon--close {
+  display: none;
+}
+
+.is-open .header__icon--close {
+  display: block;
+}
+
+.is-open .header__icon--open {
+  display: none;
+}
+
 .header__name:hover, .header__name--current:hover, .header__name:focus, .header__name--current:focus, .header__link:hover, .header__link:focus {
   color: #2196F3;
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -377,7 +389,7 @@ a {
   position: absolute;
   bottom: 100%;
   left: 0;
-  opacity: 0.9;
+  opacity: 0;
   background-color: #ffffff;
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -387,11 +399,17 @@ a {
   height: 796px;
   margin-left: auto;
   margin-right: auto;
+  z-index: 2;
 }
 
 .header-modal.is-open {
-  -webkit-transform: translate(0, 120%);
-          transform: translate(0, 120%);
+  -webkit-transform: translate(0, 110%);
+          transform: translate(0, 110%);
+  opacity: 0.9;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-modal__item {
@@ -480,7 +498,7 @@ a {
 .header-modal__icon--menu {
   fill: currentColor;
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 15px;
   cursor: pointer;
 }
@@ -489,16 +507,16 @@ a {
   fill: #2196F3;
 }
 
-.close {
-  display: none;
-}
-
-.is-open .close {
-  display: block;
-}
-
-.is-open .open {
-  display: none;
+.header-modal__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  padding: 0;
+  background-color: none;
 }
 
 /* Герой */
@@ -992,6 +1010,7 @@ a {
   opacity: 1;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
 }
 
 .backdrop.is-hidden {
